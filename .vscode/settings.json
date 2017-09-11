@@ -1,0 +1,9 @@
+{
+    "csharpfixformat.sort.usings.splitGroups": true,
+    "csharpfixformat.style.braces.onSameLine": false,
+    "csharpfixformat.style.spaces.beforeParenthesis": false,
+    "csharpfixformat.style.activateDefaultFormatterAfter": false,
+    "csharp.unitTestDebuggingOptions": {
+        "justMyCode": false
+    }
+}
