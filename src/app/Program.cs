@@ -8,7 +8,7 @@ namespace app
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Class1.GetSelectScript());
+            Console.WriteLine(Class1<object>.GetSelectScript());
             Console.WriteLine("Hello World!");
         }
     }

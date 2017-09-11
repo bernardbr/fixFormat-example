@@ -1,10 +1,35 @@
 ﻿using System;
+
 using System.Collections.Generic;
 
 namespace example
 {
-    public class Class1
+    public class Class1<T>
+        where T: class
     {
+        /// <summary>
+        /// My summary.
+        /// </summary>
+        /// <returns>The SQL Select.</returns>
+        public static string GetSelectScript2()
+        {
+            var tableName = "Table";
+            var fields = new List<string>(3);
+            fields.Add("first");
+            fields.Add("second");
+            fields.Add("last");
+
+            var keyName = "key_name";
+            var ids = new List<string>(1);
+            ids.Add($"{keyName} = @{keyName}");
+
+            return $@"
+                SELECT {string.Join(", ", fields)}
+                FROM {tableName}
+                WHERE {string.Join(" AND ", ids)}
+            ";
+        }
+
         /// <summary>
         /// My summary.
         /// </summary>
